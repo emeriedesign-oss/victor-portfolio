@@ -1,5 +1,5 @@
 /* Shared site chrome — Victor Chiemerie portfolio
-   Used by Portfolio.html, Work.html, Case Study.html, About.html, Services.html */
+   Used by index.html, Work.html, Case Study.html, About.html, Services.html */
 
 const { useState, useEffect, useRef } = React;
 
@@ -115,7 +115,7 @@ const NAV_LINKS = [
 { id: "work", label: "Work", href: "Work.html" },
 { id: "services", label: "Services", href: "Services.html" },
 { id: "about", label: "About", href: "About.html" },
-{ id: "contact", label: "Contact", href: "Portfolio.html#contact" }];
+{ id: "contact", label: "Contact", href: "index.html#contact" }];
 
 
 function Nav({ page = "home", onCurtain }) {
@@ -157,9 +157,9 @@ function Nav({ page = "home", onCurtain }) {
     if (page === "home") {window.scrollTo({ top: 0, behavior: "smooth" });return;}
     if (onCurtain) {
       onCurtain("home");
-      setTimeout(() => {window.location.href = "Portfolio.html";}, 800);
+      setTimeout(() => {window.location.href = "index.html";}, 800);
     } else {
-      window.location.href = "Portfolio.html";
+      window.location.href = "index.html";
     }
   };
 
@@ -167,7 +167,7 @@ function Nav({ page = "home", onCurtain }) {
     <>
       <nav className={`nav ${stuck ? "is-stuck" : ""}`}>
         <div className="shell nav-inner">
-          <a href="Portfolio.html" className="brand" onClick={goHome} data-cursor="hover" data-cursor-label="Home">
+          <a href="index.html" className="brand" onClick={goHome} data-cursor="hover" data-cursor-label="Home">
             <span className="brand-dot"></span>
             <span className="brand-first">Victor</span> <span className="brand-last">Chiemerie</span>
           </a>
@@ -190,7 +190,7 @@ function Nav({ page = "home", onCurtain }) {
 
       <div className={`mobile-menu ${menuOpen ? "is-open" : ""}`}>
         <div className="mobile-menu-links">
-          <a href="Portfolio.html" onClick={goHome}>Home</a>
+          <a href="index.html" onClick={goHome}>Home</a>
           {NAV_LINKS.map((l, i) =>
           <a key={l.id} href={l.href} onClick={(e) => go(e, l)} className={l.id === page ? "is-current" : ""} style={{ "--i": i + 1 }}>
               {l.label}
