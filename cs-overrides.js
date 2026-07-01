@@ -18,14 +18,14 @@
       label: "3EX · MOBILE TRADING",
       year: "2025",
       heroVideo: "assets/3ex-hero.mp4",
-      strategyImg: "assets/3ex-screen-7.webp",
+      strategyImg: "assets/3ex-screen-7.png",
       gallery: [
-        "assets/3ex-screen-1.webp",
-        "assets/3ex-screen-2.webp",
-        "assets/3ex-screen-3.webp",
-        "assets/3ex-screen-4.webp",
-        "assets/3ex-screen-5.webp",
-        "assets/3ex-screen-6.webp"
+        "assets/3ex-screen-1.png",
+        "assets/3ex-screen-2.png",
+        "assets/3ex-screen-3.png",
+        "assets/3ex-screen-4.png",
+        "assets/3ex-screen-5.png",
+        "assets/3ex-screen-6.png"
       ],
       problem: "The existing app treated every user the same: a dense, pro-grade interface that intimidated beginners at the exact moments that mattered most — reading the market and confirming a trade. Novices froze at irreversible actions; experienced traders fought navigation depth between spotting a signal and executing on it.",
       process: [
@@ -85,12 +85,12 @@
       label: "3EX · WEB EXCHANGE",
       year: "2025",
       gallery: [
-        "assets/3ex-web-screen-1.webp",
-        "assets/3ex-web-after.webp",
-        "assets/3ex-web-before.webp",
-        "assets/3ex-web-strategy.webp",
-        "assets/3ex-web-hero.webp",
-        "assets/3ex-web-screen-2.webp"
+        "assets/3ex-web-screen-1.jpg",
+        "assets/3ex-web-after.png",
+        "assets/3ex-web-before.png",
+        "assets/3ex-web-strategy.png",
+        "assets/3ex-web-hero.png",
+        "assets/3ex-web-screen-2.jpg"
       ],
       problem: "The exchange wasn't broken in one big way — it was dense, visually inconsistent and overwhelming in a dozen small ways that stacked. Key metrics like price trends, order-book depth and portfolio performance were buried or hard to interpret; jargon and unclear navigation pushed cognitive load high exactly when markets moved fastest.",
       process: [

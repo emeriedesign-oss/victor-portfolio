@@ -4,17 +4,17 @@ const { useState } = React;
 const { Cursor, useReveal, Magnetic, RevealLine, RevealFade, Arrow, Curtain, Nav, Footer, ThemeToggle, ScrollBar, useSiteTheme } = window;
 
 const PRINCIPLES = [
-  { num: "01", t: "Behavior over opinion", d: "Session recordings, hesitation patterns and drop-off data outrank anyone's taste — including mine. The user's behavior is the brief." },
-  { num: "02", t: "Confidence is the metric", d: "Most products don't fail because users can't act — they fail because users don't feel safe acting. I design to lower the psychological cost of every decision." },
-  { num: "03", t: "Restraint pays", d: "The best fix is usually smaller than the one everyone expects. Seven unglamorous corrections beat one dramatic overhaul, measurably." },
-  { num: "04", t: "Ship, measure, return", d: "A redesign isn't done at handoff. It's done when the number it was meant to move has moved." }
-];
+{ num: "01", t: "Behavior over opinion", d: "Session recordings, hesitation patterns and drop-off data outrank anyone's taste — including mine. The user's behavior is the brief." },
+{ num: "02", t: "Confidence is the metric", d: "Most products don't fail because users can't act — they fail because users don't feel safe acting. I design to lower the psychological cost of every decision." },
+{ num: "03", t: "Restraint pays", d: "The best fix is usually smaller than the one everyone expects. Seven unglamorous corrections beat one dramatic overhaul, measurably." },
+{ num: "04", t: "Ship, measure, return", d: "A redesign isn't done at handoff. It's done when the number it was meant to move has moved." }];
+
 
 const TIMELINE = [
-  { period: "2024 — Now", role: "Independent Product Designer", org: "SaaS · Crypto · DeFi", d: "Embedded design lead for founders and product teams — behavioral audits, product redesigns, and conversion architecture. Recent partners include Haya AI, 3EX, Nebula Protocol and CPT Funded." },
-  { period: "2025", role: "UI/UX Designer", org: "CPT Market", d: "Led the 3EX exchange redesign across mobile and web, including the AI Crypto GPT layer — one adaptive system serving novice and professional traders." },
-  { period: "2019 — 2024", role: "Product Designer", org: "Fintech & Web3 startups", d: "Design roles across fintech and Web3 teams in the UAE, Shanghai and remote — shipping trading platforms, dashboards and onboarding systems." }
-];
+{ period: "2024 — Now", role: "Independent Product Designer", org: "SaaS · Crypto · DeFi", d: "Embedded design lead for founders and product teams — behavioral audits, product redesigns, and conversion architecture. Recent partners include Haya AI, 3EX, Nebula Protocol and CPT Funded." },
+{ period: "2025", role: "UI/UX Designer", org: "CPT Market", d: "Led the 3EX exchange redesign across mobile and web, including the AI Crypto GPT layer — one adaptive system serving novice and professional traders." },
+{ period: "2019 — 2024", role: "Product Designer", org: "Fintech & Web3 startups", d: "Design roles across fintech and Web3 teams in the UAE, Shanghai and remote — shipping trading platforms, dashboards and onboarding systems." }];
+
 
 const TOOLBOX = ["Figma", "Behavioral audits", "Session-replay analysis", "Design systems", "Prototyping", "Usability testing", "Heuristic evaluation", "Journey mapping", "A/B testing", "Webflow / handoff"];
 
@@ -33,24 +33,24 @@ function AboutPage() {
         <div className="about-grid">
           <RevealFade>
             <div className="about-portrait" data-cursor="hover" data-cursor-label="Victor">
-              <img className="about-cutout" src="assets/victor-cutout.png" alt="Victor Chiemerie" />
+              <img className="about-cutout" src="assets/about-portrait-new.png" alt="Victor Chiemerie" data-comment-anchor="7e12efaef6-img-36-15" />
             </div>
           </RevealFade>
           <RevealFade delay={150}>
             <div className="about-body">
-              <p>
+              <p data-comment-anchor="a139e5567d-p-240-13" style={{ fontFamily: "Helvetica", fontSize: "20px", color: "rgb(91, 85, 112)" }}>
                 I started my creative journey as a graphic designer in college, driven by a natural instinct to solve problems, not just create visuals.
               </p>
-              <p className="dim about-small">
+              <p className="dim about-small" style={{ fontSize: "20px", fontFamily: "Helvetica" }}>
                 After virtually attending the Davos Conference, I saw how design shapes innovation at a global level. That moment shifted my focus from graphics to product UX.
               </p>
-              <p className="dim about-small">
+              <p className="dim about-small" style={{ fontFamily: "Helvetica", fontSize: "20px" }}>
                 As a Product UX Designer, I crafted interfaces and user flows. But over time, as innovation and AI became a big thing, I realized usability won't be the real bottleneck in most products. Behavior will. Today, I operate at the intersection of Product Strategy, Behavioral UX design, and AI-powered growth systems.
               </p>
-              <p className="dim about-small">
+              <p className="dim about-small" style={{ fontSize: "20px", fontFamily: "Helvetica" }}>
                 I help SaaS and Web3 founders transform complex products into clear, trust-driven experiences that convert. My approach combines psychology, friction mapping, and conversion architecture to turn attention into action, and action into revenue.
               </p>
-              <p className="dim about-small">
+              <p className="dim about-small" style={{ fontFamily: "Helvetica", fontSize: "20px" }}>
                 I believe the future belongs to products that understand human behavior, not just user flows. And that's the layer I help teams master.
               </p>
             </div>
@@ -68,15 +68,15 @@ function AboutPage() {
           </div>
         </div>
         <div className="svc-grid">
-          {PRINCIPLES.map((p) => (
-            <RevealFade as="div" className="svc" key={p.num}>
+          {PRINCIPLES.map((p) =>
+          <RevealFade as="div" className="svc" key={p.num}>
               <div className="svc-num">{p.num}</div>
               <div>
                 <h3 className="svc-name">{p.t}</h3>
                 <p className="svc-desc">{p.d}</p>
               </div>
             </RevealFade>
-          ))}
+          )}
         </div>
       </section>
 
@@ -90,15 +90,15 @@ function AboutPage() {
           </div>
         </div>
         <div className="tl">
-          {TIMELINE.map((t, i) => (
-            <RevealFade as="div" className="tl-row" key={i}>
+          {TIMELINE.map((t, i) =>
+          <RevealFade as="div" className="tl-row" key={i}>
               <div className="tl-period">{t.period}</div>
               <div>
                 <h3 className="tl-role">{t.role} <span className="tl-org">· {t.org}</span></h3>
                 <p className="tl-desc">{t.d}</p>
               </div>
             </RevealFade>
-          ))}
+          )}
         </div>
 
         <RevealFade>
@@ -117,17 +117,17 @@ function AboutPage() {
           <RevealLine>Let's work <span className="it">together.</span></RevealLine>
         </h2>
         <div className="contact-cta" style={{ marginTop: 40 }}>
-          <RevealFade delay={150}>
-            <a className="contact-mail" href="mailto:emerie.design@gmail.com" data-cursor="hover" data-cursor-label="Email">
-              emerie.design@gmail.com
+          <RevealFade delay={150} style={{ fontFamily: "Helvetica" }}>
+            <a className="contact-mail" href="mailto:hello@victoremerie.com" data-cursor="hover" data-cursor-label="Email">
+              hello@victoremerie.com
               <Arrow />
             </a>
           </RevealFade>
         </div>
         <Footer />
       </section>
-    </main>
-  );
+    </main>);
+
 }
 
 function App() {
@@ -148,18 +148,18 @@ function App() {
       <AboutPage />
       <ThemeToggle theme={theme} setTheme={setTheme} />
       {TweaksPanel &&
-        <TweaksPanel title="Tweaks">
+      <TweaksPanel title="Tweaks">
           <TweakSection title="Theme" subtitle="Light or dark mode">
             <TweakRadio
-              label="Mode"
-              value={vals.theme}
-              options={[{ value: "light", label: "Light" }, { value: "dark", label: "Dark" }]}
-              onChange={(v) => setTheme(v)} />
+            label="Mode"
+            value={vals.theme}
+            options={[{ value: "light", label: "Light" }, { value: "dark", label: "Dark" }]}
+            onChange={(v) => setTheme(v)} />
           </TweakSection>
         </TweaksPanel>
       }
-    </>
-  );
+    </>);
+
 }
 
 const root = ReactDOM.createRoot(document.getElementById("root"));

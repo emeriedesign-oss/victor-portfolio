@@ -47,7 +47,7 @@ function Section({ eyebrow, label, children, ...rest }) {
     <section className="cs-section shell" data-screen-label={label || eyebrow} {...rest}>
       <div className="cs-grid">
         <RevealFade><div className="eyebrow">{eyebrow}</div></RevealFade>
-        <RevealFade delay={100}><div className="cs-body">{children}</div></RevealFade>
+        <RevealFade delay={100} data-comment-anchor="9e28dce6f8-div-83-10"><div className="cs-body">{children}</div></RevealFade>
       </div>
     </section>);
 
@@ -75,10 +75,10 @@ function SolutionGallery({ p }) {
 
   return (
     <>
-      <div className="cs-gallery" ref={ref} data-cursor="hover" data-cursor-label="Drag">
+      <div className="cs-gallery" ref={ref} data-comment-anchor="1c3441aaf7-div-127-11" data-cursor="hover" data-cursor-label="Drag">
         {imgs.map((src) =>
         <div className="cell" key={src}>
-            <img src={src} alt={`${p.title} — solution`} loading="lazy" />
+            <img src={src} alt={`${p.title} — solution`} loading="lazy" data-comment-anchor="dd6f64877b-img-81-13" />
           </div>
         )}
         {Array.from({ length: slots }).map((_, i) =>
@@ -87,7 +87,7 @@ function SolutionGallery({ p }) {
           id={`${p.slug}-solution-${i + 1}`}
           shape="rounded"
           radius="8"
-          placeholder="Drop a product screen"></image-slot>
+          placeholder="Drop a product screen" data-comment-anchor="717af59e64-image-slot-85-9"></image-slot>
         )}
       </div>
       <div className="cs-gallery-nav shell">
@@ -118,8 +118,8 @@ function CaseStudy() {
 
   return (
     <main>
-      <header className="cs-header shell" data-screen-label={`Case study: ${p.title}`}>
-        <RevealFade>
+      <header className="cs-header shell" data-screen-label={`Case study: ${p.title}`} data-comment-anchor="98f9704c67-header-64-7">
+        <RevealFade data-comment-anchor="d02e1acce5-div-83-10">
           <a href="Work.html" className="cs-crumb" data-cursor="hover" data-cursor-label="Back">
             <Arrow /> All work
           </a>
@@ -186,9 +186,10 @@ function CaseStudy() {
               autoPlay
               muted
               loop
-              playsInline /> :
+              playsInline
+              data-comment-anchor="cbdbdfccf8-img-167-13" /> :
 
-            <img src={p.heroImg || p.cover} alt={`${p.title} — hero`} />}
+            <img src={p.heroImg || p.cover} alt={`${p.title} — hero`} data-comment-anchor="cbdbdfccf8-img-167-13" />}
           </div>
         </RevealFade>
       </section>
@@ -219,13 +220,13 @@ function CaseStudy() {
         <p>{p.strategy}</p>
         {p.strategyImg &&
         <figure style={{ margin: 0 }}>
-            <div className="cs-img"><img src={p.strategyImg} alt={`${p.title} — strategy`} /></div>
+            <div className="cs-img"><img src={p.strategyImg} alt={`${p.title} — strategy`} data-comment-anchor="3bb877bda9-img-196-37" /></div>
             {p.strategyCap && <div className="cs-img-caption">{p.strategyCap}</div>}
           </figure>
         }
       </Section>
 
-      <Section eyebrow="The solution">
+      <Section eyebrow="The solution" data-comment-anchor="3428288dcc-div-47-7">
         <p>{p.solutions}</p>
       </Section>
 
@@ -235,7 +236,7 @@ function CaseStudy() {
       </section>
 
       <Section eyebrow="Learnings">
-        <p style={{ width: "1242px" }}>{p.learnings}</p>
+        <p data-comment-anchor="f432772c2e-p-239-9" style={{ width: "1242px" }}>{p.learnings}</p>
         {p.reflection && <p className="dim">{p.reflection}</p>}
       </Section>
 
@@ -257,8 +258,8 @@ function CaseStudy() {
         </h2>
         <div className="contact-cta" style={{ marginTop: 40 }}>
           <RevealFade delay={150}>
-            <a className="contact-mail" href="mailto:emerie.design@gmail.com" data-cursor="hover" data-cursor-label="Email">
-              emerie.design@gmail.com
+            <a className="contact-mail" href="mailto:hello@victoremerie.com" data-cursor="hover" data-cursor-label="Email">
+              hello@victoremerie.com
               <Arrow />
             </a>
           </RevealFade>

@@ -69,7 +69,7 @@ function WorkPage() {
         <div className="contact-cta" style={{ marginTop: 48 }}>
           <RevealFade delay={200}>
             <Magnetic>
-              <a href="mailto:emerie.design@gmail.com" className="btn" data-cursor="hover" data-cursor-label="Email">
+              <a href="mailto:hello@victoremerie.com" className="btn" data-cursor="hover" data-cursor-label="Email">
                 <span className="btn-fill"></span>
                 <span>Start a conversation</span>
                 <Arrow />

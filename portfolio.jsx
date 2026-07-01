@@ -18,38 +18,38 @@ function Hero() {
     t();const i = setInterval(t, 30000);return () => clearInterval(i);
   }, []);
   return (
-    <section className="hero shell" id="top" data-screen-label="Hero">
-      <div className="hero-meta">
+    <section className="hero shell" id="top" data-screen-label="Hero" data-comment-anchor="4b2e7b1960-section-21-5">
+      <div className="hero-meta" data-comment-anchor="e4e40cc923-div-22-7">
         <div className="hero-meta-block">
           <span>NIGERIA / REMOTE</span>
           <span>{time || "00:00 WAT"}</span>
         </div>
-        <div className="hero-meta-block" style={{ textAlign: "right" }}></div>
+        <div className="hero-meta-block" style={{ textAlign: "right" }} data-comment-anchor="d8d9368781-div-27-9"></div>
       </div>
 
       <h1 className="hero-title" style={{ fontSize: "clamp(40px, 6.4vw, 104px)", lineHeight: 1.06 }}>
         <RevealLine delay={50}>A Behavioral UX Designer,</RevealLine>
         <RevealLine delay={150}><span className="it">Turning UX Insights</span></RevealLine>
-        <RevealLine delay={250}>Into <span className="ac" style={{ fontSize: "78px" }}>Revenue Models.</span></RevealLine>
+        <RevealLine delay={250}>Into <span className="ac" data-comment-anchor="3d1ef52d51-span-32-33" style={{ fontSize: "78px" }}>Revenue Models.</span></RevealLine>
       </h1>
 
       <div className="hero-bottom">
         <RevealFade as="p" className="hero-tagline" delay={500}>
-          <span className="strong">I am Victor Chiemerie</span> a Product UX/UI Designer specializing in behavioral UX for SaaS and Web3. From positioning to onboarding to conversion architecture, I engineer outcomes.
+          <span className="strong" style={{ fontFamily: "Helvetica" }}>I am Victor Chiemerie</span> <span style={{ fontFamily: "Helvetica" }}>a Product UX/UI Designer specializing in behavioral UX for SaaS and Web3. From positioning to onboarding to conversion architecture, I engineer outcomes.</span>
         </RevealFade>
         <div className="hero-cta">
           <RevealFade delay={650}>
             <Magnetic>
-              <a href="Work.html" className="btn" data-cursor="hover" data-cursor-label="Browse">
+              <a href="https://calendly.com/victor-chiemerie/schedule-a-meeting-with-victor-omeruta" target="_blank" rel="noopener noreferrer" className="btn" data-cursor="hover" data-cursor-label="Book">
                 <span className="btn-fill"></span>
-                <span>See selected work</span>
+                <span>Book a Call Now</span>
                 <Arrow />
               </a>
             </Magnetic>
           </RevealFade>
           <RevealFade delay={750}>
             <Magnetic strength={0.25}>
-              <a href="#" className="btn btn-ghost" data-cursor="hover" data-cursor-label="Download">
+              <a href="https://drive.google.com/file/d/1WJTL1FN2dWtYsR6rGHfsE4Q1SlrebciH/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="btn btn-ghost" data-cursor="hover" data-cursor-label="Download">
                 <span>Resume / CV</span>
                 <Arrow />
               </a>
@@ -63,10 +63,10 @@ function Hero() {
 
 /* ============ Work — real case studies (data.js) ============ */
 const WORK_ROWS = [
-{ num: "01", slug: "northwind", name: "Haya AI", desc: "UX behavioral intelligence for growth — from a 4% to 14% trial-to-paid conversion.", year: "2026", tag: "B2B SaaS · Founder", cover: "assets/haya-cover.png" },
-{ num: "02", slug: "vault-co", name: "3EX Mobile", desc: "Crypto trading app redesign with AI Crypto GPT — guided for beginners, dense for pros.", year: "2025", tag: "Crypto · Mobile", cover: "assets/3ex-cover.webp" },
+{ num: "01", slug: "northwind", name: "Haya AI", desc: "A product UX behavior intelligence Layer", year: "2026", tag: "B2B SaaS · Founder", cover: "assets/haya-cover.png" },
+{ num: "02", slug: "vault-co", name: "3EX Mobile", desc: "Crypto trading app redesign with AI Crypto GPT — guided for beginners, dense for pros.", year: "2025", tag: "Crypto · Mobile", cover: "assets/3ex-cover.png" },
 { num: "03", slug: "lumen-health", name: "Nebula Protocol", desc: "DeFi lending & borrowing dApp that accepts DEX LP tokens as collateral.", year: "2025", tag: "DeFi · Product", cover: "assets/nebula-cover.png" },
-{ num: "04", slug: "cartwheel", name: "3EX Web Exchange", desc: "Web exchange redesign — clear hierarchy, readable charts, insight at the point of decision.", year: "2025", tag: "Crypto · Web App", cover: "assets/3ex-web-cover.webp" },
+{ num: "04", slug: "cartwheel", name: "3EX Web Exchange", desc: "Web exchange redesign — clear hierarchy, readable charts, insight at the point of decision.", year: "2025", tag: "Crypto · Web App", cover: "assets/3ex-web-cover.png" },
 { num: "05", slug: "orbit-hq", name: "CPT Funded", desc: "Trust-first redesign for a proprietary trading firm — visual coherence as credibility.", year: "2024", tag: "Fintech · Web", cover: "assets/cpt-cover.png" }];
 
 
@@ -76,7 +76,7 @@ function Work() {
   const move = (e) => setPos({ x: e.clientX, y: e.clientY });
 
   return (
-    <section className="section shell" id="work" data-screen-label="Selected Work" onMouseMove={move}>
+    <section className="section shell" id="work" data-screen-label="Selected Work" onMouseMove={move} data-comment-anchor="8c34ed7e9e-section-79-5">
       <div className="section-head">
         <div>
           <RevealFade><div className="eyebrow">SELECTED WORKS</div></RevealFade>
@@ -102,7 +102,7 @@ function Work() {
               data-cursor="hover"
               data-cursor-label={isExt ? "Use Haya Ai" : "View case"}>
             <span className="num">{p.num}</span>
-            <span className="name">{p.name}</span>
+            <span className="name" style={{ fontFamily: "Helvetica", fontSize: "48px" }}>{p.name}</span>
             <span className="thumb" style={{ backgroundImage: `url("${p.cover}")` }}></span>
             <span className="desc">{p.desc}</span>
             <span className="meta">{p.tag} · {p.year}</span>
@@ -139,7 +139,7 @@ function Marquee() {
     <div className="marquee">
       <div className="marquee-track">
         {items.map((t, i) =>
-        <span className="marquee-item" key={i}>
+        <span className="marquee-item" key={i} style={{ fontFamily: "Helvetica" }}>
             {t}
             <Star />
           </span>
@@ -223,24 +223,24 @@ function About() {
       <div className="about-grid">
         <RevealFade>
           <div className="about-portrait" data-cursor="hover" data-cursor-label="Victor" style={{ backgroundSize: "cover" }}>
-            <img className="about-cutout" src="assets/victor-cutout.png" alt="Victor Chiemerie" />
+            <img className="about-cutout" src="assets/about-portrait-new.png" alt="Victor Chiemerie" data-comment-anchor="f1f6a10e5e-img-246-13" />
           </div>
         </RevealFade>
         <RevealFade delay={150}>
           <div className="about-body" style={{ lineHeight: "1.4" }}>
-            <p>
+            <p data-comment-anchor="a139e5567d-p-240-13" style={{ fontFamily: "Helvetica", fontSize: "20px", color: "rgb(91, 85, 112)" }}>
               I started my creative journey as a graphic designer in college, driven by a natural instinct to solve problems, not just create visuals.
             </p>
-            <p className="dim about-small">
+            <p className="dim about-small" style={{ fontFamily: "Helvetica", fontSize: "20px" }}>
               After virtually attending the Davos Conference, I saw how design shapes innovation at a global level. That moment shifted my focus from graphics to product UX.
             </p>
-            <p className="dim about-small">
+            <p className="dim about-small" style={{ fontFamily: "Helvetica", fontSize: "20px" }}>
               As a Product UX Designer, I crafted interfaces and user flows. But over time, as innovation and AI became a big thing, I realized usability won't be the real bottleneck in most products. Behavior will. Today, I operate at the intersection of Product Strategy, Behavioral UX design, and AI-powered growth systems.
             </p>
-            <p className="dim about-small">
+            <p className="dim about-small" style={{ fontSize: "20px", fontFamily: "Helvetica" }}>
               I help SaaS and Web3 founders transform complex products into clear, trust-driven experiences that convert. My approach combines psychology, friction mapping, and conversion architecture to turn attention into action, and action into revenue.
             </p>
-            <p className="dim about-small">
+            <p className="dim about-small" style={{ fontFamily: "Helvetica", fontSize: "20px" }}>
               I believe the future belongs to products that understand human behavior, not just user flows. And that's the layer I help teams master.
             </p>
             <div className="work-foot" style={{ marginTop: 44, textAlign: "left" }}>
@@ -265,14 +265,14 @@ function Contact() {
       <RevealFade><div className="contact-prefix">Let's build · {new Date().getFullYear()}</div></RevealFade>
       <h2 className="contact-headline">
         <RevealLine style={{ fontSize: "78px" }}>Have a problem</RevealLine>
-        <RevealLine delay={100} style={{ fontSize: "78px" }}>worth <span className="it">solving?</span></RevealLine>
-        <RevealLine delay={200} style={{ fontSize: "78px" }}>Let's <span className="underline">.</span></RevealLine>
+        <RevealLine delay={100} style={{ fontSize: "78px" }} data-comment-anchor="f712338c48-span-76-5">worth <span className="it">solving?</span></RevealLine>
+        <RevealLine delay={200} style={{ fontSize: "78px" }} data-comment-anchor="71039f3be2-span-76-5">Let's <span className="underline">.</span></RevealLine>
       </h2>
 
       <div className="contact-cta">
         <RevealFade delay={300}>
-          <a className="contact-mail" href="mailto:emerie.design@gmail.com" data-cursor="hover" data-cursor-label="Email">
-            emerie.design@gmail.com
+          <a className="contact-mail" href="mailto:hello@victoremerie.com" data-cursor="hover" data-cursor-label="Email" style={{ fontFamily: "Helvetica" }}>
+            hello@victoremerie.com
             <Arrow />
           </a>
         </RevealFade>

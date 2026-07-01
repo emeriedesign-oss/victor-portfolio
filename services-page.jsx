@@ -4,43 +4,43 @@ const { useState } = React;
 const { Cursor, useReveal, Magnetic, RevealLine, RevealFade, Arrow, Curtain, Nav, Footer, ThemeToggle, ScrollBar, useSiteTheme } = window;
 
 const SERVICES = [
-  {
-    num: "01", name: "Behavioral UX Audit",
-    desc: "A forensic read of how users actually behave inside your product — session recordings, drop-off data, hesitation patterns — mapped to the exact screens and moments where value leaks.",
-    deliver: ["Friction map & severity ranking", "Annotated audit report", "Prioritized fix list (effort vs. impact)"],
-    timeline: "2–3 weeks"
-  },
-  {
-    num: "02", name: "Product Redesign",
-    desc: "End-to-end redesign of a product or core flow — information architecture, visual system, and interaction design — engineered around the behavior the business needs.",
-    deliver: ["Flows & wireframes", "Hi-fi UI + design system", "Prototype & dev-ready handoff"],
-    timeline: "4–10 weeks"
-  },
-  {
-    num: "03", name: "Conversion Architecture",
-    desc: "Onboarding, activation and pricing surfaces designed against a measurable outcome — fewer drop-offs, faster first value, higher trial-to-paid.",
-    deliver: ["Onboarding & activation flows", "Copy & micro-interaction spec", "A/B test plan + success metrics"],
-    timeline: "3–6 weeks"
-  },
-  {
-    num: "04", name: "Embedded Design Lead",
-    desc: "I join your team as the design lead for a season — running rituals, mentoring, shipping, and owning quality from strategy through launch.",
-    deliver: ["Weekly shipped design", "Design ops & critique rituals", "Hiring & system stewardship"],
-    timeline: "3+ months"
-  }
-];
+{
+  num: "01", name: "Behavioral UX Audit",
+  desc: "A forensic read of how users actually behave inside your product — session recordings, drop-off data, hesitation patterns — mapped to the exact screens and moments where value leaks.",
+  deliver: ["Friction map & severity ranking", "Annotated audit report", "Prioritized fix list (effort vs. impact)"],
+  timeline: "2–3 weeks"
+},
+{
+  num: "02", name: "Product Redesign",
+  desc: "End-to-end redesign of a product or core flow — information architecture, visual system, and interaction design — engineered around the behavior the business needs.",
+  deliver: ["Flows & wireframes", "Hi-fi UI + design system", "Prototype & dev-ready handoff"],
+  timeline: "4–10 weeks"
+},
+{
+  num: "03", name: "Conversion Architecture",
+  desc: "Onboarding, activation and pricing surfaces designed against a measurable outcome — fewer drop-offs, faster first value, higher trial-to-paid.",
+  deliver: ["Onboarding & activation flows", "Copy & micro-interaction spec", "A/B test plan + success metrics"],
+  timeline: "3–6 weeks"
+},
+{
+  num: "04", name: "Embedded Design Lead",
+  desc: "I join your team as the design lead for a season — running rituals, mentoring, shipping, and owning quality from strategy through launch.",
+  deliver: ["Weekly shipped design", "Design ops & critique rituals", "Hiring & system stewardship"],
+  timeline: "3+ months"
+}];
+
 
 const PROCESS = [
-  { t: "Diagnose", d: "Audit behavior, data and context. Find the real problem — it's rarely the stated one." },
-  { t: "Define", d: "Frame the outcome as a number we both agree to move, and the behavior that moves it." },
-  { t: "Design", d: "Flows, systems and interfaces — tested against real users before they're called done." },
-  { t: "Deliver", d: "Dev-ready handoff, then measurement. The engagement ends when the metric moves, not at the file export." }
-];
+{ t: "Diagnose", d: "Audit behavior, data and context. Find the real problem — it's rarely the stated one." },
+{ t: "Define", d: "Frame the outcome as a number we both agree to move, and the behavior that moves it." },
+{ t: "Design", d: "Flows, systems and interfaces — tested against real users before they're called done." },
+{ t: "Deliver", d: "Dev-ready handoff, then measurement. The engagement ends when the metric moves, not at the file export." }];
+
 
 function ServicesPage() {
   return (
     <main>
-      <section className="page-hero shell" data-screen-label="Services hero">
+      <section className="page-hero shell" data-screen-label="Services hero" data-comment-anchor="c787478a87-section-43-7">
         <RevealFade><div className="eyebrow">Services</div></RevealFade>
         <h1 className="section-title page-hero-title">
           <RevealLine delay={50}>Design that's</RevealLine>
@@ -53,8 +53,8 @@ function ServicesPage() {
 
       <section className="section shell" style={{ paddingTop: 0 }} data-screen-label="Service offerings">
         <div className="svc-detail-list">
-          {SERVICES.map((s) => (
-            <RevealFade as="div" className="svc-detail" key={s.num}>
+          {SERVICES.map((s) =>
+          <RevealFade as="div" className="svc-detail" key={s.num}>
               <div className="svc-num">{s.num}</div>
               <div className="svc-detail-main">
                 <h2 className="svc-detail-name">{s.name}</h2>
@@ -69,7 +69,7 @@ function ServicesPage() {
                 <div className="v">{s.timeline}</div>
               </div>
             </RevealFade>
-          ))}
+          )}
         </div>
       </section>
 
@@ -89,15 +89,15 @@ function ServicesPage() {
           </RevealFade>
         </div>
         <div className="cs-steps" style={{ marginTop: 0 }}>
-          {PROCESS.map((s, i) => (
-            <RevealFade as="div" className="step" key={i}>
+          {PROCESS.map((s, i) =>
+          <RevealFade as="div" className="step" key={i}>
               <span className="n">0{i + 1}</span>
               <div>
                 <h3>{s.t}</h3>
                 <p>{s.d}</p>
               </div>
             </RevealFade>
-          ))}
+          )}
         </div>
       </section>
 
@@ -108,16 +108,16 @@ function ServicesPage() {
         </h2>
         <div className="contact-cta" style={{ marginTop: 40 }}>
           <RevealFade delay={150}>
-            <a className="contact-mail" href="mailto:emerie.design@gmail.com" data-cursor="hover" data-cursor-label="Email">
-              emerie.design@gmail.com
+            <a className="contact-mail" href="mailto:hello@victoremerie.com" data-cursor="hover" data-cursor-label="Email" style={{ fontFamily: "Helvetica" }}>
+              hello@victoremerie.com
               <Arrow />
             </a>
           </RevealFade>
         </div>
         <Footer />
       </section>
-    </main>
-  );
+    </main>);
+
 }
 
 function App() {
@@ -138,18 +138,18 @@ function App() {
       <ServicesPage />
       <ThemeToggle theme={theme} setTheme={setTheme} />
       {TweaksPanel &&
-        <TweaksPanel title="Tweaks">
+      <TweaksPanel title="Tweaks">
           <TweakSection title="Theme" subtitle="Light or dark mode">
             <TweakRadio
-              label="Mode"
-              value={vals.theme}
-              options={[{ value: "light", label: "Light" }, { value: "dark", label: "Dark" }]}
-              onChange={(v) => setTheme(v)} />
+            label="Mode"
+            value={vals.theme}
+            options={[{ value: "light", label: "Light" }, { value: "dark", label: "Dark" }]}
+            onChange={(v) => setTheme(v)} />
           </TweakSection>
         </TweaksPanel>
       }
-    </>
-  );
+    </>);
+
 }
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
